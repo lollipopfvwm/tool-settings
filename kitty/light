@@ -2,7 +2,7 @@ font_family      monofur for Powerline
 bold_font        monofur for Powerline
 italic_font      monofur for Powerline
 bold_italic_font monofur for Powerline
-font_size 16.0
+font_size 14.0
 confirm_os_window_close 0
 
 window_margin_width 20 20 0 20
