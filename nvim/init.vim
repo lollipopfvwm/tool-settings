@@ -46,7 +46,7 @@ call plug#end()
 
 "==================== General Config ======================"
 
-set laststatus=0                    " Use status line
+set laststatus=2                    " Use status line
 set number                          " Enable numbers on the left
 
 set termguicolors                   " Opaque Background
@@ -58,6 +58,67 @@ endif
 
 set mouse=a                         " Enable mouse scrolling
 
+" required by coc
+set hidden
+set nobackup
+set nowritebackup
+set cmdheight=1
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+
+" ====================== Plugin Configurations =====================
+
+" HTML sets
+" let g:user_emmet_install_global =  0
+" autocmd FileType html,css EmmeIntall
+" let g:user_emmet_leader_key='<c-z>'
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+"" built in plugins
+let loaded_netrw = 0                                    " diable netew
+let g:omni_sql_no_default_maps = 1                      " disable sql omni completion
+let g:loaded_python_provider = 0
+let g:loaded_perl_provider = 0
+let g:loaded_ruby_provider = 0
+if glob('~/.python3') != ''
+  let g:python3_host_prog = expand('~/.python3/bin/python')
+else
+  let g:python3_host_prog = systemlist('which python3')[0]
+endif
+
+"" coc
+
+" Navigate snippet placeholders using tab
+let g:coc_snippet_next = '<Tab>'
+let g:coc_snippet_prev = '<S-Tab>'
+
+" list of the extensions to make sure are always installed
+let g:coc_global_extensions = [
+            \'coc-yank',
+            \'coc-pairs',
+            \'coc-json',
+            \'coc-css',
+            \'coc-html',
+            \'coc-tsserver',
+            \'coc-yaml',
+            \'coc-lists',
+            \'coc-snippets',
+            \'coc-pyright',
+            \'coc-clangd',
+            \'coc-prettier',
+            \'coc-xml',
+            \'coc-syntax',
+            \'coc-git',
+            \'coc-marketplace',
+            \'coc-highlight',
+            \'coc-sh',
+            \]
+
 "==================== External Files ======================"
 source ~/.config/nvim/status-line/statusline.vim
 source ~/.config/nvim/color/four.vim
+

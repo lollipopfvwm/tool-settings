@@ -1,5 +1,5 @@
 set noshowmode
-set laststatus=0
+set laststatus=2
 
 function! RedrawModeColors(mode) " {{{
     " Normal mode

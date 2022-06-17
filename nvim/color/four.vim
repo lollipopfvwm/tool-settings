@@ -14,7 +14,7 @@ let g:colors_name = "four"
 
 let s:palette = {}
 
-let s:palette.bg        = {'dark': "#0f1015",  'light': "#EBF5F7"}
+let s:palette.bg        = {'dark': "#212128",  'light': "#EBF5F7"}
 let s:palette.comment   = {'dark': "#323232",  'light': "#ABB0B6"}
 let s:palette.markup    = {'dark': "#F07178",  'light': "#F05181"}
 let s:palette.constant  = {'dark': "#dc9191",  'light': "#A33ACC"}
